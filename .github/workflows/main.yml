@@ -19,7 +19,7 @@ jobs:
           aws-region: eu-north-1
       - name: Login to Amazon ECR
         run: |
-          aws ecr-public get-login-password --region eu-north-1 | docker login --username AWS --password-stdin public.ecr.aws/x2b5k4z8
+          aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/x2b5k4z8
       - name: Build the Docker image
         run: docker build -t public.ecr.aws/m7w0w0j5/public-repo .
       - name: Push the Docker image
